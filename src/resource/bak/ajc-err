@@ -1,0 +1,7 @@
+Code size too big: 79876
+
+/BigClass.java [error] problem generating method BigClass.updateFieldsUsingSum : Code size too big: 75876
+
+/BigClass.java [error] problem generating method BigClass.updateFieldsUsingSum : Code size too big: 69876
+
+/BigClass.java [error] problem generating method BigClass.updateFieldsUsingSum : Code size too big: 65876

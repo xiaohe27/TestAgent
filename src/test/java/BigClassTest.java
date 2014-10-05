@@ -6,8 +6,7 @@ import org.junit.Test;
 public class BigClassTest {
     @Test
     public void testMain(){
-        BigClass bc=new BigClass();
-        bc.updateFieldsUsingSum(1);
+
     }
 
 }

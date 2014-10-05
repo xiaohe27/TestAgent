@@ -29,6 +29,8 @@ public class BigClassGen {
         StringBuilder sb=new StringBuilder();
 
         //no package decl is supported at the moment.
+        sb.append(this.genImport());
+
         sb.append("public class "+this.className+"{\n");
 
         sb.append(genFields());
@@ -43,14 +45,32 @@ public class BigClassGen {
         return sb.toString();
     }
 
+    private String genImport() {
+        StringBuilder sb=new StringBuilder();
+        sb.append("import java.util.*;\n");
+
+        return sb.toString();
+    }
+
     private String genMain() {
         StringBuilder sb=new StringBuilder();
 
         sb.append("public static void main(String[] args){\n");
 
-        sb.append(this.className+" bc=new "+this.className+"();\n");
-        sb.append("bc.updateFieldsUsingSum(0);\n");
-        sb.append("System.out.println(\"a0:\"+bc.a0);\n");
+        sb.append("Vector<Integer> v = new Vector<Integer>();\n");
+
+        sb.append(" v.add(1);\n");
+
+        sb.append(" v.add(2);\n");
+
+        sb.append(" v.add(4);\n");
+
+        sb.append(" v.add(8);\n");
+
+        for (int i=0; i<this.sizeOfMethod; i++){
+            sb.append(" Iterator iter"+i+" = v.iterator();\n");
+        }
+
 
         sb.append("}\n");
         return sb.toString();
@@ -59,44 +79,15 @@ public class BigClassGen {
     private String genFields(){
         StringBuilder sb=new StringBuilder();
 
-        String intFields="public int a";
-
-        for (int i=0; i<this.numOfFields; i++){
-            sb.append(intFields+i+";\n");
-        }
-
         sb.append("\n");
-
         return sb.toString();
     }
 
     private String genMethods(){
 
-
         StringBuilder sb=new StringBuilder();
 
-        //only build one method now.
-        sb.append("public void updateFieldsUsingSum(");
-
-        for (int i=0; i<this.numOfFields-1; i++){
-            if (i%4==0)
-                sb.append("\n");
-
-            sb.append("int a"+i+", ");
-        }
-
-        sb.append("int a"+(this.numOfFields-1)+"){\n");
-
-        //method body
-        for (int j=0; j< this.sizeOfMethod; j++) {
-            for (int i = 0; i < this.numOfFields; i++) {
-                sb.append("this.a" + i + "+=a" + i + "+" + j + ";");
-            }
-
-            sb.append("\n");
-        }
-
-        sb.append("}\n");
+        sb.append("\n");
 
         return sb.toString();
     }
