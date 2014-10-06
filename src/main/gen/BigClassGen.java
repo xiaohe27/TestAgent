@@ -71,6 +71,9 @@ public class BigClassGen {
             sb.append(" Iterator iter"+i+" = v.iterator();\n");
         }
 
+        sb.append("\niter0.hasNext();\n");
+        sb.append("System.out.println(iter0.next());\n" +
+                "System.out.println(iter0.next());\n");
 
         sb.append("}\n");
         return sb.toString();

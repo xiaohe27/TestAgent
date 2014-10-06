@@ -6,7 +6,9 @@ import org.junit.Test;
 public class BigClassTest {
     @Test
     public void testMain(){
-
+        BigClass bc=new BigClass();
+        String[] args={""};
+        bc.main(args);
     }
 
 }

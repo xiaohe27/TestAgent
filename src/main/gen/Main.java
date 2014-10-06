@@ -12,7 +12,7 @@ public class Main {
         //4600 ok for java, 4700 not ok
 
         //3250 ok for aspectj
-        BigClassGen bcg=new BigClassGen(className, 3850);
+        BigClassGen bcg=new BigClassGen(className, 3300);
 
         String classContent=bcg.genBigJavaClass();
 
