@@ -1,0 +1,11 @@
+xiaohe@hexiaoLabPC:~/Projects/TestAgent/src/resource$ java org.aspectj.tools.ajc.Main -1.6 -d out -inpath . HasNextMonitorAspect.aj 
+=== Statistics on foward methods ===
+=== Statistics on foward methods ===
+
+
+running:
+xiaohe@hexiaoLabPC:~/Projects/TestAgent/src/resource/out$ java BigClass 
+1
+! hasNext() has not been called before calling next() for an iterator
+2
+

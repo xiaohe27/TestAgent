@@ -9,10 +9,10 @@ public class Main {
 
         String className="BigClass";
 
-        //4600 ok for java, 4700 not ok
+        //8246 ok for java, 8247  not ok for java
 
-        //3250 ok for aspectj
-        BigClassGen bcg=new BigClassGen(className, 3300);
+
+        BigClassGen bcg=new BigClassGen(className, 8247);
 
         String classContent=bcg.genBigJavaClass();
 

@@ -1,0 +1,32 @@
+Using static weaving:
+xiaohe@hexiaoLabPC:~/Projects/TestAgent/src/resource$ ajc -1.6 -d out -inpath . HasNextMonitorAspect.aj 
+/BigClass.java [error] problem generating method BigClass.main : Code size too big: 65613
+
+
+Using agent:
+xiaohe@hexiaoLabPC:~/Projects/TestAgent/src/resource$ java -javaagent:agent.jar BigClass 
+[AppClassLoader@75a06ec2] error at /BigClass.java::0 problem generating method BigClass.main : Code size too big: 65613
+Exception in thread "main" java.lang.ClassFormatError: Absent Code attribute in method that is not native or abstract in class file BigClass
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+xiaohe@hexiaoLabPC:~/Projects/TestAgent/src/resource$ 
+
+
+=====================================================================================================
+After switching to Choonghwan's ajc variant:
+
+xiaohe@hexiaoLabPC:~/Projects/TestAgent/src/resource$ ajc -1.6 -d out -inpath . HasNextMonitorAspect.aj 
+=== Statistics on foward methods ===
+=== Statistics on foward methods ===
+
