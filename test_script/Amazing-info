@@ -1,0 +1,5 @@
+When using ajc to weave the source java files and aj files, even if the orginal file does not compile due to execeeding the 64KB method size constraint, 
+
+ajc can still generate the weaved code successfully which is runnable.
+
+Maybe AJC compiler does some optimization on the source code level to make it more space efficient.
