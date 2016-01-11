@@ -11,5 +11,7 @@ public class TestHello {
         Hello h=new Hello();
 
         Assert.assertEquals("5+0 must be 5", 5, h.add2Num(5,0));
+
+        System.out.println("This test is modified by a remote session");
     }
 }

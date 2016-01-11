@@ -9,6 +9,4 @@
 #Deploy these new AspectJ Libraries and execute this script again, you will find the monitored class 
 #together with the monitoring libraries have been generated successfully in the 'mop' directory.
 #
-
-#javac BigClass.java
-ajc -1.6 -d mop -inpath . HasNextMonitorAspect.aj
+ajc -1.6 -d mop HasNextMonitorAspect.aj BigClass.java

@@ -8254,7 +8254,13 @@ Vector<Integer> v = new Vector<Integer>();
  Iterator iter8243 = v.iterator();
  Iterator iter8244 = v.iterator();
  Iterator iter8245 = v.iterator();
- Iterator iter8246 = v.iterator();
+
+
+//does not compile by the std javac due to method size constraint if stuff within this area is added ()
+//Iterator iter8246 = v.iterator();
+//Iterator iter8247 = v.iterator();
+
+//////////////////////////////////////////////////////////
 
 iter0.hasNext();
 System.out.println(iter0.next());

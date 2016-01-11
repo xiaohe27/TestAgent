@@ -1,0 +1,11 @@
+Unweaved:
+
+99.2 KB byte code : javac
+75.3 KB byte code : ajc
+
+
+Weaved byte code:
+
+ajc 1.7.1 does not compile
+ajc 1.8.3 : 150.3 KB, 8287 lines
+ajc 1.8.2 with Choonghwan's patch: 150.7 KB, 8272 lines
